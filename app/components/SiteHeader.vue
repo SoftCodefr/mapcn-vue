@@ -4,6 +4,7 @@ import { Github } from "lucide-vue-next";
 const navItems = [
   { href: "/docs", label: "Docs" },
   { href: "/docs/basic-map", label: "Components" },
+  { href: "/blocks", label: "Blocks" },
   { href: "/playground", label: "Playground" },
 ];
 </script>
@@ -14,6 +15,7 @@ const navItems = [
   >
     <div class="mx-auto flex h-14 max-w-screen-2xl items-center gap-6 px-6">
       <Logo />
+      <Separator orientation="vertical" class="h-4!" />
       <nav class="hidden items-center gap-4 text-sm md:flex">
         <NuxtLink
           v-for="item in navItems"

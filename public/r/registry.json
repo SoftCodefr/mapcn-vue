@@ -8,6 +8,30 @@
       "type": "registry:ui",
       "title": "Map",
       "description": "A MapLibre-powered Vue map component with markers, popups, tooltips, routes, arcs, clusters, and controls."
+    },
+    {
+      "name": "heatmap",
+      "type": "registry:block",
+      "title": "Heatmap",
+      "description": "Globe-projected heatmap visualizing earthquake density with zoom-dependent styling."
+    },
+    {
+      "name": "delivery-tracker",
+      "type": "registry:block",
+      "title": "Delivery Tracker",
+      "description": "Live order tracking with route progress, courier position, and order details."
+    },
+    {
+      "name": "analytics-map",
+      "type": "registry:block",
+      "title": "Analytics Map",
+      "description": "Real-time analytics overview with a world map, breakdown cards, and device stats."
+    },
+    {
+      "name": "logistics-network",
+      "type": "registry:block",
+      "title": "Logistics Network",
+      "description": "Domestic logistics map with a sidebar of stats and filters."
     }
   ]
 }

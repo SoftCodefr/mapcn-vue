@@ -127,6 +127,108 @@
           }
         }
       }
+    },
+    {
+      "name": "analytics-map",
+      "type": "registry:block",
+      "title": "Analytics Map",
+      "description": "Real-time analytics overview with a world map, breakdown cards, and device stats.",
+      "dependencies": ["lucide-vue-next"],
+      "registryDependencies": ["@mapcn-vue/map", "card"],
+      "files": [
+        {
+          "path": "app/registry/blocks/analytics-map/AnalyticsMap.vue",
+          "type": "registry:page",
+          "target": "components/ui/blocks/analytics-map/AnalyticsMap.vue"
+        },
+        {
+          "path": "app/registry/blocks/analytics-map/data.ts",
+          "type": "registry:component",
+          "target": "components/ui/blocks/analytics-map/data.ts"
+        },
+        {
+          "path": "app/registry/blocks/analytics-map/OverviewCard.vue",
+          "type": "registry:component",
+          "target": "components/ui/blocks/analytics-map/OverviewCard.vue"
+        },
+        {
+          "path": "app/registry/blocks/analytics-map/BreakdownCard.vue",
+          "type": "registry:component",
+          "target": "components/ui/blocks/analytics-map/BreakdownCard.vue"
+        }
+      ],
+      "categories": ["analytics", "dashboard"],
+      "meta": { "iframeHeight": "970px" }
+    },
+    {
+      "name": "logistics-network",
+      "type": "registry:block",
+      "title": "Logistics Network",
+      "description": "Domestic logistics map with a sidebar of stats and filters.",
+      "dependencies": ["lucide-vue-next"],
+      "registryDependencies": ["@mapcn-vue/map"],
+      "files": [
+        {
+          "path": "app/registry/blocks/logistics-network/LogisticsNetwork.vue",
+          "type": "registry:page",
+          "target": "components/ui/blocks/logistics-network/LogisticsNetwork.vue"
+        },
+        {
+          "path": "app/registry/blocks/logistics-network/data.ts",
+          "type": "registry:component",
+          "target": "components/ui/blocks/logistics-network/data.ts"
+        },
+        {
+          "path": "app/registry/blocks/logistics-network/FilterSidebar.vue",
+          "type": "registry:component",
+          "target": "components/ui/blocks/logistics-network/FilterSidebar.vue"
+        },
+        {
+          "path": "app/registry/blocks/logistics-network/NetworkMap.vue",
+          "type": "registry:component",
+          "target": "components/ui/blocks/logistics-network/NetworkMap.vue"
+        }
+      ],
+      "categories": ["logistics", "network"],
+      "meta": { "iframeHeight": "800px" }
+    },
+    {
+      "name": "heatmap",
+      "type": "registry:block",
+      "title": "Heatmap",
+      "description": "Globe-projected heatmap visualizing earthquake density with zoom-dependent styling.",
+      "dependencies": [],
+      "registryDependencies": ["@mapcn-vue/map", "card"],
+      "files": [
+        {
+          "path": "app/registry/blocks/heatmap/Heatmap.vue",
+          "type": "registry:page",
+          "target": "components/ui/blocks/heatmap/Heatmap.vue"
+        },
+        {
+          "path": "app/registry/blocks/heatmap/GlobeHeatmapLayers.vue",
+          "type": "registry:component",
+          "target": "components/ui/blocks/heatmap/GlobeHeatmapLayers.vue"
+        }
+      ],
+      "categories": ["visualization", "heatmap"]
+    },
+    {
+      "name": "delivery-tracker",
+      "type": "registry:block",
+      "title": "Delivery Tracker",
+      "description": "Live order tracking with route progress, courier position, and order details.",
+      "dependencies": ["lucide-vue-next"],
+      "registryDependencies": ["@mapcn-vue/map", "card", "badge", "button"],
+      "files": [
+        {
+          "path": "app/registry/blocks/delivery-tracker/DeliveryTracker.vue",
+          "type": "registry:page",
+          "target": "components/ui/blocks/delivery-tracker/DeliveryTracker.vue"
+        }
+      ],
+      "categories": ["tracking", "delivery"],
+      "meta": { "iframeHeight": "680px" }
     }
   ]
 }
