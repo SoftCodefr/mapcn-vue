@@ -7,7 +7,10 @@ defineProps<{ title: string; description?: string }>();
     <h1 class="text-foreground text-3xl font-semibold tracking-tight">
       {{ title }}
     </h1>
-    <p v-if="description" class="text-muted-foreground text-base leading-relaxed">
+    <p
+      v-if="description"
+      class="text-muted-foreground text-base leading-relaxed"
+    >
       {{ description }}
     </p>
   </div>

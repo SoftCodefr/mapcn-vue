@@ -23,8 +23,8 @@ useHead({ title: "Clusters · mapcn-vue" });
 
     <DocsSection title="Basic Example">
       <p>
-        Click on clusters to zoom in. Click individual points to see details
-        in a popup.
+        Click on clusters to zoom in. Click individual points to see details in
+        a popup.
       </p>
       <ComponentPreview :code="clusterSource">
         <ClusterExample />

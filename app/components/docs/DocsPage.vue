@@ -1,5 +1,8 @@
 <script setup lang="ts">
-interface TocItem { title: string; slug: string }
+interface TocItem {
+  title: string;
+  slug: string;
+}
 
 defineProps<{
   title: string;

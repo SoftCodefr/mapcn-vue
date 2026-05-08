@@ -128,12 +128,17 @@ useMapLayer(map, isLoaded, (m) => {
   const onClusterClick = async (
     e: MapMouseEvent & { features?: MapGeoJSONFeature[] },
   ) => {
-    const features = m.queryRenderedFeatures(e.point, { layers: [clusterLayerId] });
+    const features = m.queryRenderedFeatures(e.point, {
+      layers: [clusterLayerId],
+    });
     if (!features.length) return;
     const feature = features[0];
     const clusterId = feature.properties?.cluster_id as number;
     const pointCount = feature.properties?.point_count as number;
-    const coordinates = (feature.geometry as GeoJSON.Point).coordinates as [number, number];
+    const coordinates = (feature.geometry as GeoJSON.Point).coordinates as [
+      number,
+      number,
+    ];
 
     emit("clusterClick", clusterId, coordinates, pointCount);
 
@@ -149,7 +154,9 @@ useMapLayer(map, isLoaded, (m) => {
   ) => {
     if (!e.features?.length) return;
     const feature = e.features[0];
-    const coordinates = (feature.geometry as GeoJSON.Point).coordinates.slice() as [number, number];
+    const coordinates = (
+      feature.geometry as GeoJSON.Point
+    ).coordinates.slice() as [number, number];
 
     while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
       coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;

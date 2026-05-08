@@ -11,9 +11,7 @@ const route = useRoute();
   >
     <div class="overflow-y-auto pt-6 pr-4 pl-2 [scrollbar-gutter:stable]">
       <div v-for="group in docsNavigation" :key="group.title" class="pb-4">
-        <p
-          class="text-sidebar-foreground/70 mb-1 px-2 text-xs font-medium"
-        >
+        <p class="text-sidebar-foreground/70 mb-1 px-2 text-xs font-medium">
           {{ group.title }}
         </p>
         <ul class="flex flex-col">

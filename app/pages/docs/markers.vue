@@ -40,7 +40,9 @@ const toc = [
     </DocsNote>
 
     <DocsSection title="Basic Example">
-      <p>Simple markers with tooltips and popups showing location information.</p>
+      <p>
+        Simple markers with tooltips and popups showing location information.
+      </p>
       <ComponentPreview :code="markersSource">
         <MarkersExample />
       </ComponentPreview>

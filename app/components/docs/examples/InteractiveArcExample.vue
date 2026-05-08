@@ -10,12 +10,60 @@ interface Lane extends MapArcDatum {
 }
 
 const lanes: Lane[] = [
-  { id: "shg-lax", origin: "Shanghai", destination: "Los Angeles", from: [121.4737, 31.2304], to: [-118.2437, 34.0522], volume: "24.8k TEU", mode: "sea" },
-  { id: "sin-rtm", origin: "Singapore", destination: "Rotterdam", from: [103.8198, 1.3521], to: [4.4777, 51.9244], volume: "9.4k TEU", mode: "sea" },
-  { id: "san-cpt", origin: "Santos", destination: "Cape Town", from: [-46.3322, -23.9608], to: [18.4241, -33.9249], volume: "3.2k TEU", mode: "sea" },
-  { id: "syd-nrt", origin: "Sydney", destination: "Tokyo", from: [151.2093, -33.8688], to: [139.6917, 35.6895], volume: "640 tons", mode: "air" },
-  { id: "dxb-jfk", origin: "Dubai", destination: "New York", from: [55.2708, 25.2048], to: [-74.006, 40.7128], volume: "980 tons", mode: "air" },
-  { id: "dxb-bom", origin: "Dubai", destination: "Mumbai", from: [55.2708, 25.2048], to: [72.8777, 19.076], volume: "1.2k tons", mode: "sea" },
+  {
+    id: "shg-lax",
+    origin: "Shanghai",
+    destination: "Los Angeles",
+    from: [121.4737, 31.2304],
+    to: [-118.2437, 34.0522],
+    volume: "24.8k TEU",
+    mode: "sea",
+  },
+  {
+    id: "sin-rtm",
+    origin: "Singapore",
+    destination: "Rotterdam",
+    from: [103.8198, 1.3521],
+    to: [4.4777, 51.9244],
+    volume: "9.4k TEU",
+    mode: "sea",
+  },
+  {
+    id: "san-cpt",
+    origin: "Santos",
+    destination: "Cape Town",
+    from: [-46.3322, -23.9608],
+    to: [18.4241, -33.9249],
+    volume: "3.2k TEU",
+    mode: "sea",
+  },
+  {
+    id: "syd-nrt",
+    origin: "Sydney",
+    destination: "Tokyo",
+    from: [151.2093, -33.8688],
+    to: [139.6917, 35.6895],
+    volume: "640 tons",
+    mode: "air",
+  },
+  {
+    id: "dxb-jfk",
+    origin: "Dubai",
+    destination: "New York",
+    from: [55.2708, 25.2048],
+    to: [-74.006, 40.7128],
+    volume: "980 tons",
+    mode: "air",
+  },
+  {
+    id: "dxb-bom",
+    origin: "Dubai",
+    destination: "Mumbai",
+    from: [55.2708, 25.2048],
+    to: [72.8777, 19.076],
+    volume: "1.2k tons",
+    mode: "sea",
+  },
 ];
 
 const modeColors = { air: "#a78bfa", sea: "#34d399" };

@@ -1,4 +1,10 @@
-import { onBeforeUnmount, shallowRef, watch, type MaybeRefOrGetter, toValue } from "vue";
+import {
+  onBeforeUnmount,
+  shallowRef,
+  watch,
+  type MaybeRefOrGetter,
+  toValue,
+} from "vue";
 import MapLibreGL, { type PopupOptions } from "maplibre-gl";
 
 /**
@@ -8,9 +14,7 @@ import MapLibreGL, { type PopupOptions } from "maplibre-gl";
  * The caller decides *when* to instantiate the popup (e.g. attach to a
  * marker, or open it directly on the map) by calling `create()`.
  */
-export function usePopup(
-  options: MaybeRefOrGetter<PopupOptions | undefined>,
-) {
+export function usePopup(options: MaybeRefOrGetter<PopupOptions | undefined>) {
   const container = document.createElement("div");
   const popup = shallowRef<MapLibreGL.Popup | null>(null);
 

@@ -8,7 +8,9 @@ const destination = {
   startCenter: [10, 50] as [number, number],
 };
 
-const mapRef = useTemplateRef<{ map: { value: import("maplibre-gl").Map | null } }>("map");
+const mapRef = useTemplateRef<{
+  map: { value: import("maplibre-gl").Map | null };
+}>("map");
 
 const flyTo = () => {
   mapRef.value?.map?.value?.flyTo({

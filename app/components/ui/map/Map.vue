@@ -82,9 +82,7 @@ const isStyleLoaded = ref(false);
 
 const resolvedTheme = useResolvedTheme(() => props.theme);
 
-const isControlled = computed(
-  () => props.viewport !== undefined,
-);
+const isControlled = computed(() => props.viewport !== undefined);
 
 const mapStyles = computed<Required<MapStyles>>(() => ({
   dark: props.styles?.dark ?? defaultStyles.dark,
@@ -127,7 +125,12 @@ const collectMapOptions = (): Partial<MapOptions> => {
   for (const [key, value] of Object.entries(attrs)) {
     if (value === undefined) continue;
     // Skip Vue event listeners (e.g. onClick) — they aren't MapLibre options.
-    if (key.startsWith("on") && key.length > 2 && key[2] === key[2].toUpperCase()) continue;
+    if (
+      key.startsWith("on") &&
+      key.length > 2 &&
+      key[2] === key[2].toUpperCase()
+    )
+      continue;
     if (RESERVED_ATTR_KEYS.has(key)) continue;
     out[key] = value;
   }
@@ -142,7 +145,9 @@ onMounted(() => {
   if (!containerRef.value) return;
 
   const initialStyle =
-    resolvedTheme.value === "dark" ? mapStyles.value.dark : mapStyles.value.light;
+    resolvedTheme.value === "dark"
+      ? mapStyles.value.dark
+      : mapStyles.value.light;
   currentStyle = initialStyle;
 
   const map = new MapLibreGL.Map({
@@ -221,21 +226,18 @@ watch(
 );
 
 // Handle style change (theme switch / styles prop change)
-watch(
-  [resolvedTheme, mapStyles],
-  ([theme, styles]) => {
-    const map = mapInstance.value;
-    if (!map) return;
+watch([resolvedTheme, mapStyles], ([theme, styles]) => {
+  const map = mapInstance.value;
+  if (!map) return;
 
-    const newStyle = theme === "dark" ? styles.dark : styles.light;
-    if (currentStyle === newStyle) return;
+  const newStyle = theme === "dark" ? styles.dark : styles.light;
+  if (currentStyle === newStyle) return;
 
-    clearStyleTimeout();
-    currentStyle = newStyle;
-    isStyleLoaded.value = false;
-    map.setStyle(newStyle, { diff: true });
-  },
-);
+  clearStyleTimeout();
+  currentStyle = newStyle;
+  isStyleLoaded.value = false;
+  map.setStyle(newStyle, { diff: true });
+});
 
 // Sync projection if it changes after mount
 watch(

@@ -22,7 +22,7 @@ const showPopup = ref(true);
             </p>
             <button
               type="button"
-              class="hover:bg-accent inline-flex h-8 w-full items-center justify-center rounded-md border border-border bg-background text-xs font-medium transition-colors"
+              class="hover:bg-accent border-border bg-background inline-flex h-8 w-full items-center justify-center rounded-md border text-xs font-medium transition-colors"
               @click="showPopup = false"
             >
               Close

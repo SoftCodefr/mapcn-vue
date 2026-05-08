@@ -1,5 +1,13 @@
 <script setup lang="ts">
-import { onBeforeUnmount, onMounted, provide, shallowRef, useAttrs, watch, watchEffect } from "vue";
+import {
+  onBeforeUnmount,
+  onMounted,
+  provide,
+  shallowRef,
+  useAttrs,
+  watch,
+  watchEffect,
+} from "vue";
 import MapLibreGL, { type MarkerOptions } from "maplibre-gl";
 
 import { useMap } from "./composables/use-map";
@@ -54,7 +62,12 @@ const collectMarkerOptions = (): Partial<MarkerOptions> => {
   const out: Record<string, unknown> = {};
   for (const [key, value] of Object.entries(attrs)) {
     if (value === undefined) continue;
-    if (key.startsWith("on") && key.length > 2 && key[2] === key[2].toUpperCase()) continue;
+    if (
+      key.startsWith("on") &&
+      key.length > 2 &&
+      key[2] === key[2].toUpperCase()
+    )
+      continue;
     if (key === "class" || key === "style" || key === "element") continue;
     out[key] = value;
   }

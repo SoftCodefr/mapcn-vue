@@ -20,7 +20,8 @@ const viewport = ref<MapViewport>({
       <p class="text-muted-foreground">
         Center
         <span class="text-foreground tabular-nums">
-          {{ viewport.center[0].toFixed(3) }}, {{ viewport.center[1].toFixed(3) }}
+          {{ viewport.center[0].toFixed(3) }},
+          {{ viewport.center[1].toFixed(3) }}
         </span>
       </p>
       <p class="text-muted-foreground">

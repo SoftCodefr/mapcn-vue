@@ -30,10 +30,7 @@ const handleReset = () => {
 </script>
 
 <template>
-  <div
-    v-if="isLoaded"
-    class="absolute top-3 left-3 z-10 flex flex-col gap-2"
-  >
+  <div v-if="isLoaded" class="absolute top-3 left-3 z-10 flex flex-col gap-2">
     <div class="flex gap-2">
       <button
         type="button"

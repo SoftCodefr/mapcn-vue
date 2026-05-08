@@ -45,8 +45,8 @@ const toc = [
         <DocsCode>@hover</DocsCode> event to highlight an arc and surface
         details in a <DocsCode>MapPopup</DocsCode>. Use a
         <DocsCode>match</DocsCode> expression on
-        <DocsCode>line-color</DocsCode> to style arcs by category. Here, air
-        and sea lanes are styled differently.
+        <DocsCode>line-color</DocsCode> to style arcs by category. Here, air and
+        sea lanes are styled differently.
       </p>
       <ComponentPreview :code="interactiveArcSource">
         <InteractiveArcExample />

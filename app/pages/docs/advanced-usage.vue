@@ -57,7 +57,10 @@ const toc = [
   { title: "Using a Ref", slug: "using-a-ref" },
   { title: "Using the Composable", slug: "using-the-composable" },
   { title: "Example: Custom Controls", slug: "example-custom-controls" },
-  { title: "Example: Custom GeoJSON Layer", slug: "example-custom-geojson-layer" },
+  {
+    title: "Example: Custom GeoJSON Layer",
+    slug: "example-custom-geojson-layer",
+  },
   { title: "Example: Markers via Layers", slug: "example-markers-via-layers" },
   { title: "Extend to Build", slug: "extend-to-build" },
 ];
@@ -73,14 +76,17 @@ const toc = [
     <DocsSection>
       <p>
         Access the underlying MapLibre GL map instance to use any feature from
-        the MapLibre GL JS API. You can use either a template <DocsCode>ref</DocsCode>
-        or the <DocsCode>useMap</DocsCode> composable.
+        the MapLibre GL JS API. You can use either a template
+        <DocsCode>ref</DocsCode> or the <DocsCode>useMap</DocsCode> composable.
       </p>
     </DocsSection>
 
     <DocsNote>
       <strong>Tip:</strong> Check the
-      <DocsLink href="https://maplibre.org/maplibre-gl-js/docs/API/classes/Map/" external>
+      <DocsLink
+        href="https://maplibre.org/maplibre-gl-js/docs/API/classes/Map/"
+        external
+      >
         MapLibre GL JS documentation
       </DocsLink>
       for the full list of available methods and events.
@@ -88,9 +94,9 @@ const toc = [
 
     <DocsSection title="Using a Ref">
       <p>
-        The simplest way to access the map instance from a parent component.
-        The <DocsCode>Map</DocsCode> component exposes its MapLibre instance
-        via <DocsCode>defineExpose</DocsCode>.
+        The simplest way to access the map instance from a parent component. The
+        <DocsCode>Map</DocsCode> component exposes its MapLibre instance via
+        <DocsCode>defineExpose</DocsCode>.
       </p>
       <CodeBlock :code="refCode" language="vue" />
     </DocsSection>
@@ -140,13 +146,34 @@ const toc = [
     <DocsSection title="Extend to Build">
       <p>You can extend this to build custom features like:</p>
       <ul>
-        <li><strong>Real-time tracking</strong> — Live location updates for delivery, rides, or fleet management</li>
-        <li><strong>Geofencing</strong> — Trigger actions when users enter or leave specific areas</li>
-        <li><strong>Heatmaps</strong> — Visualize density data like population, crime, or activity hotspots</li>
-        <li><strong>Drawing tools</strong> — Let users draw polygons, lines, or place markers for custom areas</li>
-        <li><strong>3D buildings</strong> — Extrude building footprints for urban visualization</li>
-        <li><strong>Animations</strong> — Animate markers along routes or create fly-through experiences</li>
-        <li><strong>Custom data layers</strong> — Overlay weather, traffic, or satellite imagery</li>
+        <li>
+          <strong>Real-time tracking</strong> — Live location updates for
+          delivery, rides, or fleet management
+        </li>
+        <li>
+          <strong>Geofencing</strong> — Trigger actions when users enter or
+          leave specific areas
+        </li>
+        <li>
+          <strong>Heatmaps</strong> — Visualize density data like population,
+          crime, or activity hotspots
+        </li>
+        <li>
+          <strong>Drawing tools</strong> — Let users draw polygons, lines, or
+          place markers for custom areas
+        </li>
+        <li>
+          <strong>3D buildings</strong> — Extrude building footprints for urban
+          visualization
+        </li>
+        <li>
+          <strong>Animations</strong> — Animate markers along routes or create
+          fly-through experiences
+        </li>
+        <li>
+          <strong>Custom data layers</strong> — Overlay weather, traffic, or
+          satellite imagery
+        </li>
       </ul>
     </DocsSection>
   </DocsPage>

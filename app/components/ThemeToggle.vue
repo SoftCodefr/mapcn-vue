@@ -19,7 +19,7 @@ const toggle = () => {
   <button
     type="button"
     aria-label="Toggle theme"
-    class="hover:bg-accent inline-flex size-8 items-center justify-center rounded-md border border-border bg-background transition-colors"
+    class="hover:bg-accent border-border bg-background inline-flex size-8 items-center justify-center rounded-md border transition-colors"
     @click="toggle"
   >
     <Sun v-if="mode === 'dark'" class="size-4" />

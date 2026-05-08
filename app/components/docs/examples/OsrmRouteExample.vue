@@ -33,11 +33,17 @@ onMounted(async () => {
     );
     const data = await response.json();
     if (data.routes?.length > 0) {
-      routes.value = data.routes.map((r: { geometry: { coordinates: [number, number][] }; duration: number; distance: number }) => ({
-        coordinates: r.geometry.coordinates,
-        duration: r.duration,
-        distance: r.distance,
-      }));
+      routes.value = data.routes.map(
+        (r: {
+          geometry: { coordinates: [number, number][] };
+          duration: number;
+          distance: number;
+        }) => ({
+          coordinates: r.geometry.coordinates,
+          duration: r.duration,
+          distance: r.distance,
+        }),
+      );
     }
   } catch (err) {
     console.error("Failed to fetch routes:", err);

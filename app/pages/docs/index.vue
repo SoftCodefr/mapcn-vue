@@ -5,12 +5,38 @@ definePageMeta({ layout: "docs" });
 useHead({ title: "Introduction · mapcn-vue" });
 
 const features = [
-  { icon: Zap, title: "Zero Config", description: "Works out of the box with free map tiles. No API keys needed." },
-  { icon: Moon, title: "Theme Aware", description: "Automatically switches between light and dark map styles." },
-  { icon: Puzzle, title: "Composable", description: "Build complex UIs with simple, composable components." },
-  { icon: Code, title: "TypeScript", description: "Full type safety with comprehensive TypeScript support." },
-  { icon: Box, title: "Copy & Paste", description: "Own your code. No dependencies, just copy into your project." },
-  { icon: Layers, title: "Any Map Style", description: "Use any MapLibre-compatible tiles: MapTiler, Carto, OpenStreetMap, and more." },
+  {
+    icon: Zap,
+    title: "Zero Config",
+    description:
+      "Works out of the box with free map tiles. No API keys needed.",
+  },
+  {
+    icon: Moon,
+    title: "Theme Aware",
+    description: "Automatically switches between light and dark map styles.",
+  },
+  {
+    icon: Puzzle,
+    title: "Composable",
+    description: "Build complex UIs with simple, composable components.",
+  },
+  {
+    icon: Code,
+    title: "TypeScript",
+    description: "Full type safety with comprehensive TypeScript support.",
+  },
+  {
+    icon: Box,
+    title: "Copy & Paste",
+    description: "Own your code. No dependencies, just copy into your project.",
+  },
+  {
+    icon: Layers,
+    title: "Any Map Style",
+    description:
+      "Use any MapLibre-compatible tiles: MapTiler, Carto, OpenStreetMap, and more.",
+  },
 ];
 
 const toc = [
@@ -30,13 +56,15 @@ const toc = [
   >
     <DocsSection>
       <p>
-        <strong>mapcn-vue</strong> provides beautifully designed, accessible, and
-        customizable map components for Vue. Built on
+        <strong>mapcn-vue</strong> provides beautifully designed, accessible,
+        and customizable map components for Vue. Built on
         <DocsLink href="https://maplibre.org" external>MapLibre GL</DocsLink>,
         styled with
-        <DocsLink href="https://tailwindcss.com" external>Tailwind CSS</DocsLink>,
-        and designed to play nice with
-        <DocsLink href="https://www.shadcn-vue.com" external>shadcn-vue</DocsLink>.
+        <DocsLink href="https://tailwindcss.com" external>Tailwind CSS</DocsLink
+        >, and designed to play nice with
+        <DocsLink href="https://www.shadcn-vue.com" external
+          >shadcn-vue</DocsLink
+        >.
       </p>
     </DocsSection>
 
@@ -64,25 +92,59 @@ const toc = [
         is built for teams that want to ship quickly without giving up control:
       </p>
       <ul>
-        <li><strong>Own Your Code:</strong> copy the components into your project and customize anything.</li>
-        <li><strong>Start Fast:</strong> one command and a basic map renders with production-ready defaults.</li>
-        <li><strong>Scale Safely:</strong> stay on top of MapLibre directly, drop to raw APIs when needed.</li>
-        <li><strong>Design-System Friendly:</strong> styled with Tailwind, fits naturally with shadcn-vue.</li>
+        <li>
+          <strong>Own Your Code:</strong> copy the components into your project
+          and customize anything.
+        </li>
+        <li>
+          <strong>Start Fast:</strong> one command and a basic map renders with
+          production-ready defaults.
+        </li>
+        <li>
+          <strong>Scale Safely:</strong> stay on top of MapLibre directly, drop
+          to raw APIs when needed.
+        </li>
+        <li>
+          <strong>Design-System Friendly:</strong> styled with Tailwind, fits
+          naturally with shadcn-vue.
+        </li>
       </ul>
     </DocsSection>
 
     <DocsSection title="Any Map Style">
       <p>
         mapcn-vue works with any
-        <DocsLink href="https://maplibre.org/maplibre-style-spec/" external>MapLibre-compatible tiles</DocsLink>.
-        You can use tiles from virtually any provider:
+        <DocsLink href="https://maplibre.org/maplibre-style-spec/" external
+          >MapLibre-compatible tiles</DocsLink
+        >. You can use tiles from virtually any provider:
       </p>
       <ul>
-        <li><DocsLink href="https://www.openstreetmap.org" external>OpenStreetMap</DocsLink> — community-driven, open-source map data</li>
-        <li><DocsLink href="https://carto.com/basemaps" external>Carto</DocsLink> — clean, minimal basemaps for data viz</li>
-        <li><DocsLink href="https://www.maptiler.com" external>MapTiler</DocsLink> — beautiful vector tiles, extensive customization</li>
-        <li><DocsLink href="https://stadiamaps.com" external>Stadia Maps</DocsLink> — fast, reliable tile hosting</li>
-        <li><DocsLink href="https://www.thunderforest.com" external>Thunderforest</DocsLink> — outdoors, cycling, transport themes</li>
+        <li>
+          <DocsLink href="https://www.openstreetmap.org" external
+            >OpenStreetMap</DocsLink
+          >
+          — community-driven, open-source map data
+        </li>
+        <li>
+          <DocsLink href="https://carto.com/basemaps" external>Carto</DocsLink>
+          — clean, minimal basemaps for data viz
+        </li>
+        <li>
+          <DocsLink href="https://www.maptiler.com" external>MapTiler</DocsLink>
+          — beautiful vector tiles, extensive customization
+        </li>
+        <li>
+          <DocsLink href="https://stadiamaps.com" external
+            >Stadia Maps</DocsLink
+          >
+          — fast, reliable tile hosting
+        </li>
+        <li>
+          <DocsLink href="https://www.thunderforest.com" external
+            >Thunderforest</DocsLink
+          >
+          — outdoors, cycling, transport themes
+        </li>
         <li>Any other provider that supports the MapLibre style spec</li>
       </ul>
     </DocsSection>

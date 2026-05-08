@@ -48,8 +48,8 @@ const toc = [
       <p>
         Use the <DocsCode>styles</DocsCode> prop to provide custom map styles.
         This example uses free vector tiles from
-        <DocsLink href="https://openfreemap.org" external>OpenFreeMap</DocsLink>,
-        an open-source project sourcing data from OpenStreetMap.
+        <DocsLink href="https://openfreemap.org" external>OpenFreeMap</DocsLink
+        >, an open-source project sourcing data from OpenStreetMap.
       </p>
       <ComponentPreview :code="customStyleSource">
         <CustomStyleExample />

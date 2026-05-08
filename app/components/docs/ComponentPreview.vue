@@ -19,7 +19,7 @@ const { data: highlighted } = await useAsyncData(
 );
 
 const previewCls = computed(() =>
-  cn("w-full overflow-hidden rounded-lg border h-[420px]", props.class),
+  cn("h-[420px] w-full overflow-hidden rounded-lg border", props.class),
 );
 
 const codeCls = computed(() =>
@@ -44,13 +44,15 @@ const codeCls = computed(() =>
       <div
         class="absolute inset-x-0 bottom-0 flex w-full items-center justify-center"
         :class="
-          !expanded ? 'from-background to-background/0 bg-linear-to-t pt-12 pb-6' : ''
+          !expanded
+            ? 'from-background to-background/0 bg-linear-to-t pt-12 pb-6'
+            : ''
         "
       >
         <button
           v-if="!expanded"
           type="button"
-          class="bg-background hover:bg-muted inline-flex h-8 items-center justify-center rounded-md border border-border px-3 text-xs font-medium transition-colors"
+          class="bg-background hover:bg-muted border-border inline-flex h-8 items-center justify-center rounded-md border px-3 text-xs font-medium transition-colors"
           @click="expanded = true"
         >
           View Code

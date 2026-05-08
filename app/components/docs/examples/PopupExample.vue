@@ -10,7 +10,8 @@ const places = [
     rating: 4.8,
     reviews: 12453,
     hours: "10:00 AM - 5:00 PM",
-    image: "https://images.unsplash.com/photo-1575223970966-76ae61ee7838?w=300&h=200&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1575223970966-76ae61ee7838?w=300&h=200&fit=crop",
     lng: -73.9632,
     lat: 40.7794,
   },
@@ -22,7 +23,8 @@ const places = [
     rating: 4.9,
     reviews: 8234,
     hours: "Open 24 hours",
-    image: "https://images.unsplash.com/photo-1496588152823-86ff7695e68f?w=300&h=200&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1496588152823-86ff7695e68f?w=300&h=200&fit=crop",
     lng: -73.9969,
     lat: 40.7061,
   },
@@ -34,7 +36,8 @@ const places = [
     rating: 4.7,
     reviews: 5621,
     hours: "5:15 AM - 2:00 AM",
-    image: "https://images.unsplash.com/photo-1534430480872-3498386e7856?w=300&h=200&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1534430480872-3498386e7856?w=300&h=200&fit=crop",
     lng: -73.9772,
     lat: 40.7527,
   },
@@ -63,7 +66,7 @@ const places = [
                 :src="place.image"
                 :alt="place.name"
                 class="size-full object-cover"
-              >
+              />
             </div>
             <div class="space-y-2 p-3">
               <div>
@@ -102,7 +105,7 @@ const places = [
                 <button
                   type="button"
                   aria-label="Open in new tab"
-                  class="hover:bg-accent inline-flex size-8 items-center justify-center rounded-md border border-border bg-background transition-colors"
+                  class="hover:bg-accent border-border bg-background inline-flex size-8 items-center justify-center rounded-md border transition-colors"
                 >
                   <ExternalLink class="size-3.5" />
                 </button>

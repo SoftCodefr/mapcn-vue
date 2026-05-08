@@ -12,9 +12,7 @@ import { Flame, TrendingUp } from "lucide-vue-next";
               <div
                 class="pointer-events-none absolute size-18 rounded-full bg-orange-500/30"
               />
-              <div
-                class="absolute size-7 rounded-full bg-orange-500/40"
-              />
+              <div class="absolute size-7 rounded-full bg-orange-500/40" />
               <div
                 class="rounded-full bg-linear-to-br from-orange-500 to-red-500 p-1.5 shadow-lg shadow-orange-500/50"
               >

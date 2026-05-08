@@ -1,7 +1,10 @@
 <script setup lang="ts">
 import { cn } from "@/lib/utils";
 
-interface TocItem { title: string; slug: string }
+interface TocItem {
+  title: string;
+  slug: string;
+}
 
 const props = defineProps<{ items: TocItem[]; class?: string }>();
 
@@ -31,7 +34,11 @@ const setupObserver = () => {
 onMounted(setupObserver);
 onBeforeUnmount(() => observer?.disconnect());
 
-watch(() => props.items, () => nextTick(setupObserver), { deep: true });
+watch(
+  () => props.items,
+  () => nextTick(setupObserver),
+  { deep: true },
+);
 
 const navCls = computed(() => cn("flex flex-col", props.class));
 </script>

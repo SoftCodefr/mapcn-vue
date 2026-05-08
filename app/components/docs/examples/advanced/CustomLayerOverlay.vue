@@ -14,13 +14,15 @@ const geojsonData: GeoJSON.FeatureCollection<GeoJSON.Polygon> = {
       properties: { name: "Central Park", type: "park" },
       geometry: {
         type: "Polygon",
-        coordinates: [[
-          [-73.9731, 40.7644],
-          [-73.9819, 40.7681],
-          [-73.958, 40.8006],
-          [-73.9493, 40.7969],
-          [-73.9731, 40.7644],
-        ]],
+        coordinates: [
+          [
+            [-73.9731, 40.7644],
+            [-73.9819, 40.7681],
+            [-73.958, 40.8006],
+            [-73.9493, 40.7969],
+            [-73.9731, 40.7644],
+          ],
+        ],
       },
     },
     {
@@ -28,13 +30,15 @@ const geojsonData: GeoJSON.FeatureCollection<GeoJSON.Polygon> = {
       properties: { name: "Bryant Park", type: "park" },
       geometry: {
         type: "Polygon",
-        coordinates: [[
-          [-73.9837, 40.7536],
-          [-73.9854, 40.7542],
-          [-73.984, 40.7559],
-          [-73.9823, 40.7553],
-          [-73.9837, 40.7536],
-        ]],
+        coordinates: [
+          [
+            [-73.9837, 40.7536],
+            [-73.9854, 40.7542],
+            [-73.984, 40.7559],
+            [-73.9823, 40.7553],
+            [-73.9837, 40.7536],
+          ],
+        ],
       },
     },
   ],
@@ -69,14 +73,19 @@ watch([map, isLoaded], ([m, loaded]) => {
     });
   }
 
-  const onEnter = () => { m.getCanvas().style.cursor = "pointer"; };
+  const onEnter = () => {
+    m.getCanvas().style.cursor = "pointer";
+  };
   const onLeave = () => {
     m.getCanvas().style.cursor = "";
     hoveredPark.value = null;
   };
   const onMove = (e: MapMouseEvent) => {
-    const features = m.queryRenderedFeatures(e.point, { layers: ["parks-fill"] });
-    if (features.length > 0) hoveredPark.value = features[0].properties?.name ?? null;
+    const features = m.queryRenderedFeatures(e.point, {
+      layers: ["parks-fill"],
+    });
+    if (features.length > 0)
+      hoveredPark.value = features[0].properties?.name ?? null;
   };
 
   m.on("mouseenter", "parks-fill", onEnter);
@@ -104,8 +113,10 @@ const toggleLayer = () => {
   if (!m) return;
   isLayerVisible.value = !isLayerVisible.value;
   const visibility = isLayerVisible.value ? "visible" : "none";
-  if (m.getLayer("parks-fill")) m.setLayoutProperty("parks-fill", "visibility", visibility);
-  if (m.getLayer("parks-outline")) m.setLayoutProperty("parks-outline", "visibility", visibility);
+  if (m.getLayer("parks-fill"))
+    m.setLayoutProperty("parks-fill", "visibility", visibility);
+  if (m.getLayer("parks-outline"))
+    m.setLayoutProperty("parks-outline", "visibility", visibility);
 };
 </script>
 

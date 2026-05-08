@@ -3,9 +3,15 @@ import type { MapGeoJSONFeature, MapMouseEvent } from "maplibre-gl";
 
 function generateRandomPoints(
   count: number,
-): GeoJSON.FeatureCollection<GeoJSON.Point, { id: number; name: string; category: string }> {
+): GeoJSON.FeatureCollection<
+  GeoJSON.Point,
+  { id: number; name: string; category: string }
+> {
   const center = { lng: -73.98, lat: 40.75 };
-  const features: GeoJSON.Feature<GeoJSON.Point, { id: number; name: string; category: string }>[] = [];
+  const features: GeoJSON.Feature<
+    GeoJSON.Point,
+    { id: number; name: string; category: string }
+  >[] = [];
   for (let i = 0; i < count; i++) {
     const lng = center.lng + (Math.random() - 0.5) * 0.15;
     const lat = center.lat + (Math.random() - 0.5) * 0.1;
@@ -14,7 +20,9 @@ function generateRandomPoints(
       properties: {
         id: i,
         name: `Location ${i + 1}`,
-        category: ["Restaurant", "Cafe", "Bar", "Shop"][Math.floor(Math.random() * 4)]!,
+        category: ["Restaurant", "Cafe", "Bar", "Shop"][
+          Math.floor(Math.random() * 4)
+        ]!,
       },
       geometry: { type: "Point", coordinates: [lng, lat] },
     });
@@ -60,7 +68,10 @@ watch([map, isLoaded], ([m, loaded]) => {
   const onClick = (e: MapMouseEvent & { features?: MapGeoJSONFeature[] }) => {
     if (!e.features?.length) return;
     const feature = e.features[0];
-    const coords = (feature.geometry as GeoJSON.Point).coordinates as [number, number];
+    const coords = (feature.geometry as GeoJSON.Point).coordinates as [
+      number,
+      number,
+    ];
     selectedPoint.value = {
       id: feature.properties?.id,
       name: feature.properties?.name,
@@ -68,8 +79,12 @@ watch([map, isLoaded], ([m, loaded]) => {
       coordinates: coords,
     };
   };
-  const onEnter = () => { m.getCanvas().style.cursor = "pointer"; };
-  const onLeave = () => { m.getCanvas().style.cursor = ""; };
+  const onEnter = () => {
+    m.getCanvas().style.cursor = "pointer";
+  };
+  const onLeave = () => {
+    m.getCanvas().style.cursor = "";
+  };
 
   m.on("click", layerId, onClick);
   m.on("mouseenter", layerId, onEnter);

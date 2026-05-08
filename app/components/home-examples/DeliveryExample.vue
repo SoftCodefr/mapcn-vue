@@ -13,7 +13,8 @@ onMounted(async () => {
       `https://router.project-osrm.org/route/v1/driving/${store.lng},${store.lat};${home.lng},${home.lat}?overview=full&geometries=geojson`,
     );
     const data = await response.json();
-    const coords: [number, number][] | undefined = data?.routes?.[0]?.geometry?.coordinates;
+    const coords: [number, number][] | undefined =
+      data?.routes?.[0]?.geometry?.coordinates;
     if (!coords) return;
     route.value = coords;
     const truckIdx = Math.floor(coords.length * 0.6);

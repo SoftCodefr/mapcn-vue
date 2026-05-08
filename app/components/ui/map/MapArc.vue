@@ -92,7 +92,12 @@ const geoJSON = computed<GeoJSON.FeatureCollection<GeoJSON.LineString>>(() => ({
       properties,
       geometry: {
         type: "LineString",
-        coordinates: buildArcCoordinates(from, to, props.curvature, props.samples),
+        coordinates: buildArcCoordinates(
+          from,
+          to,
+          props.curvature,
+          props.samples,
+        ),
       },
     };
   }),
@@ -208,22 +213,19 @@ watch(geoJSON, (next) => {
   src?.setData(next);
 });
 
-watch(
-  [mergedPaint, mergedLayout, hitWidth],
-  ([paint, layout, hw]) => {
-    const m = map.value;
-    if (!m?.getLayer(layerId)) return;
-    for (const [key, value] of Object.entries(paint)) {
-      m.setPaintProperty(layerId, key as keyof MapArcLinePaint, value as never);
-    }
-    for (const [key, value] of Object.entries(layout)) {
-      m.setLayoutProperty(layerId, key as keyof MapArcLineLayout, value as never);
-    }
-    if (m.getLayer(hitLayerId)) {
-      m.setPaintProperty(hitLayerId, "line-width", hw);
-    }
-  },
-);
+watch([mergedPaint, mergedLayout, hitWidth], ([paint, layout, hw]) => {
+  const m = map.value;
+  if (!m?.getLayer(layerId)) return;
+  for (const [key, value] of Object.entries(paint)) {
+    m.setPaintProperty(layerId, key as keyof MapArcLinePaint, value as never);
+  }
+  for (const [key, value] of Object.entries(layout)) {
+    m.setLayoutProperty(layerId, key as keyof MapArcLineLayout, value as never);
+  }
+  if (m.getLayer(hitLayerId)) {
+    m.setPaintProperty(hitLayerId, "line-width", hw);
+  }
+});
 </script>
 
 <template></template>

@@ -48,7 +48,10 @@ const buildFeature = (coords: [number, number][]) =>
   }) as const;
 
 useMapLayer(map, isLoaded, (m) => {
-  m.addSource(sourceId, { type: "geojson", data: buildFeature(props.coordinates) });
+  m.addSource(sourceId, {
+    type: "geojson",
+    data: buildFeature(props.coordinates),
+  });
   m.addLayer({
     id: layerId,
     type: "line",

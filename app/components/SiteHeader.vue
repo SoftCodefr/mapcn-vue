@@ -2,7 +2,6 @@
 import { Github } from "lucide-vue-next";
 
 const navItems = [
-  { href: "/", label: "Home" },
   { href: "/docs", label: "Docs" },
   { href: "/docs/basic-map", label: "Components" },
   { href: "/playground", label: "Playground" },
@@ -11,7 +10,7 @@ const navItems = [
 
 <template>
   <header
-    class="sticky top-0 z-40 w-full border-b border-border bg-background/80 backdrop-blur"
+    class="bg-background/85 supports-backdrop-filter:bg-background/70 sticky top-0 z-50 h-14 w-full backdrop-blur"
   >
     <div class="mx-auto flex h-14 max-w-screen-2xl items-center gap-6 px-6">
       <Logo />
@@ -32,7 +31,7 @@ const navItems = [
           target="_blank"
           rel="noopener noreferrer"
           aria-label="GitHub"
-          class="hover:bg-accent inline-flex size-8 items-center justify-center rounded-md border border-border bg-background transition-colors"
+          class="hover:bg-accent border-border bg-background inline-flex size-8 items-center justify-center rounded-md border transition-colors"
         >
           <Github class="size-4" />
         </a>

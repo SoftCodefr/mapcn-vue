@@ -6,7 +6,8 @@ export type MapContextValue = {
   isLoaded: Ref<boolean>;
 };
 
-export const MapContextKey: InjectionKey<MapContextValue> = Symbol("MapContext");
+export const MapContextKey: InjectionKey<MapContextValue> =
+  Symbol("MapContext");
 
 export type MarkerContextValue = {
   marker: Ref<MapLibreMarker | null>;

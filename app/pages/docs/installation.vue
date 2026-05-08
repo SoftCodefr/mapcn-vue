@@ -2,7 +2,8 @@
 definePageMeta({ layout: "docs" });
 useHead({ title: "Installation · mapcn-vue" });
 
-const installCommand = "npx shadcn-vue@latest add https://mapcn-vue.com/r/map.json";
+const installCommand =
+  "npx shadcn-vue@latest add https://mapcn-vue.com/r/map.json";
 
 const usageCode = `<script setup lang="ts">
 import { Map, MapControls } from "@/components/ui/map";
@@ -34,9 +35,13 @@ const toc = [
     <DocsSection title="Prerequisites">
       <p>
         A Vue 3 project with
-        <DocsLink href="https://tailwindcss.com" external>Tailwind CSS</DocsLink>
+        <DocsLink href="https://tailwindcss.com" external
+          >Tailwind CSS</DocsLink
+        >
         and
-        <DocsLink href="https://www.shadcn-vue.com" external>shadcn-vue</DocsLink>
+        <DocsLink href="https://www.shadcn-vue.com" external
+          >shadcn-vue</DocsLink
+        >
         set up.
       </p>
     </DocsSection>

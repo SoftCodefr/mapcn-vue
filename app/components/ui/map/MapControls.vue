@@ -52,8 +52,10 @@ const containerClass = computed(() =>
   ),
 );
 
-const handleZoomIn = () => map.value?.zoomTo(map.value.getZoom() + 1, { duration: 300 });
-const handleZoomOut = () => map.value?.zoomTo(map.value.getZoom() - 1, { duration: 300 });
+const handleZoomIn = () =>
+  map.value?.zoomTo(map.value.getZoom() + 1, { duration: 300 });
+const handleZoomOut = () =>
+  map.value?.zoomTo(map.value.getZoom() - 1, { duration: 300 });
 const handleResetBearing = () => map.value?.resetNorthPitch({ duration: 300 });
 
 const handleLocate = () => {

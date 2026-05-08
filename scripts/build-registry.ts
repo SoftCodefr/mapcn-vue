@@ -50,7 +50,10 @@ function build() {
 
   fs.mkdirSync(OUT_DIR, { recursive: true });
 
-  const indexEntries: Pick<RegistryItem, "name" | "type" | "title" | "description">[] = [];
+  const indexEntries: Pick<
+    RegistryItem,
+    "name" | "type" | "title" | "description"
+  >[] = [];
 
   for (const item of data.items) {
     const built: RegistryItem = {
