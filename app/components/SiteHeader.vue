@@ -31,7 +31,7 @@ const navItems = [
           target="_blank"
           rel="noopener noreferrer"
           aria-label="GitHub"
-          class="hover:bg-accent border-border bg-background inline-flex size-8 items-center justify-center rounded-md border transition-colors"
+          class="hover:bg-accent bg-background inline-flex size-8 items-center justify-center rounded-md transition-colors"
         >
           <Github class="size-4" />
         </a>

@@ -57,7 +57,9 @@ const toc = [
     <DocsSection>
       <p>
         <strong>mapcn-vue</strong> provides beautifully designed, accessible,
-        and customizable map components for Vue. Built on
+        and customizable map components for Vue. It is a Vue port of
+        <DocsLink href="https://www.mapcn.dev/" external>mapcn</DocsLink> by
+        <strong>@anmol</strong>, originally available for React. Built on
         <DocsLink href="https://maplibre.org" external>MapLibre GL</DocsLink>,
         styled with
         <DocsLink href="https://tailwindcss.com" external>Tailwind CSS</DocsLink
