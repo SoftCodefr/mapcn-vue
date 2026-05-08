@@ -1,20 +1,25 @@
 <template>
-  <footer class="border-t border-border bg-background">
+  <footer class="bg-background">
     <div
-      class="mx-auto flex max-w-screen-2xl flex-col items-center gap-2 px-6 py-6 text-xs text-muted-foreground sm:flex-row sm:justify-between"
+      class="mx-auto flex max-w-screen-2xl flex-col items-center gap-2 px-6 py-6 text-xs text-muted-foreground sm:flex-row sm:justify-center"
     >
       <p>
-        Built with
-        <NuxtLink to="/" class="text-foreground hover:underline">mapcn-vue</NuxtLink>.
-        Vue port of
+        Ported by
         <a
-          href="https://mapcn.dev"
+          href="https://softcode.fr"
           target="_blank"
           rel="noopener noreferrer"
-          class="text-foreground hover:underline"
-        >mapcn</a>.
+          class="underline font-medium"
+        >SoftCode.fr</a>.
+        The source code is available on 
+        <a
+          href="https://github.com/SoftCodefr/mapcn-vue"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="underline font-medium"
+        >GitHub</a>.
       </p>
-      <p>MIT licensed.</p>
+      <!-- <p>MIT licensed.</p> -->
     </div>
   </footer>
 </template>
