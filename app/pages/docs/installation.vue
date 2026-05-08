@@ -2,7 +2,7 @@
 definePageMeta({ layout: "docs" });
 useHead({ title: "Installation · mapcn-vue" });
 
-const installCommand = "npx shadcn-vue@latest add @mapcn-vue/map";
+const installCommand = "npx shadcn-vue@latest add https://mapcn-vue.com/r/map.json";
 
 const usageCode = `<script setup lang="ts">
 import { Map, MapControls } from "@/components/ui/map";
