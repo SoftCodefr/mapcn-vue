@@ -4,7 +4,7 @@ import { fileURLToPath } from "node:url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
-const REGISTRY_FILE = path.join(ROOT, "registry.json");
+const REGISTRY_FILE = path.join(ROOT, "registries.json");
 const OUT_DIR = path.join(ROOT, "public", "r");
 
 interface RegistryFile {
@@ -94,11 +94,11 @@ function build() {
     items: indexEntries,
   };
   fs.writeFileSync(
-    path.join(OUT_DIR, "registry.json"),
+    path.join(OUT_DIR, "registries.json"),
     JSON.stringify(indexOut, null, 2) + "\n",
     "utf-8",
   );
-  console.log("Built: public/r/registry.json");
+  console.log("Built: public/r/registries.json");
 }
 
 build();
