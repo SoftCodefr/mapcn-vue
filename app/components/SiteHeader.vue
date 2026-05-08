@@ -27,7 +27,7 @@ const navItems = [
       </nav>
       <div class="ml-auto flex items-center gap-2">
         <a
-          href="https://github.com/AnmolSaini16/mapcn"
+          href="https://github.com/SoftCodefr/mapcn-vue"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="GitHub"

@@ -55,7 +55,7 @@ watch(
     <PopupShell
       variant="popover"
       :close-button="closeButton"
-      :class="class"
+      :class="$props.class"
       @close="popup?.remove()"
     >
       <slot />

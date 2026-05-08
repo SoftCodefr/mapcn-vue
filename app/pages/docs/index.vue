@@ -41,7 +41,7 @@ const features = [
 
 const toc = [
   { title: "Philosophy", slug: "philosophy" },
-  { title: "Why mapcn?", slug: "why-mapcn" },
+  { title: "Why mapcn-vue?", slug: "why-mapcn-vue" },
   { title: "Any Map Style", slug: "any-map-style" },
   { title: "Features", slug: "features" },
 ];
@@ -86,7 +86,7 @@ const toc = [
       </p>
     </DocsSection>
 
-    <DocsSection title="Why mapcn?">
+    <DocsSection title="Why mapcn-vue?">
       <p>
         Most Vue map setups are either too opinionated or too heavy. mapcn-vue
         is built for teams that want to ship quickly without giving up control:

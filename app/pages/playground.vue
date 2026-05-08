@@ -59,6 +59,8 @@ const routeCoords: [number, number][] = [
   [-122.41, 37.69],
   [-122.399, 37.683],
 ];
+const routeStart = routeCoords[0]!;
+const routeEnd = routeCoords[routeCoords.length - 1]!;
 
 // Arcs demo
 const arcs = ref<(MapArcDatum & { color: string })[]>([
@@ -236,10 +238,7 @@ const selectedPointKey = computed(() =>
               :width="4"
               :opacity="0.85"
             />
-            <MapMarker
-              :longitude="routeCoords[0][0]"
-              :latitude="routeCoords[0][1]"
-            >
+            <MapMarker :longitude="routeStart[0]" :latitude="routeStart[1]">
               <MarkerContent>
                 <div
                   class="size-4 rounded-full border-2 border-white bg-emerald-500 shadow"
@@ -247,10 +246,7 @@ const selectedPointKey = computed(() =>
                 <MarkerLabel position="bottom">Start</MarkerLabel>
               </MarkerContent>
             </MapMarker>
-            <MapMarker
-              :longitude="routeCoords[routeCoords.length - 1][0]"
-              :latitude="routeCoords[routeCoords.length - 1][1]"
-            >
+            <MapMarker :longitude="routeEnd[0]" :latitude="routeEnd[1]">
               <MarkerContent>
                 <div
                   class="size-4 rounded-full border-2 border-white bg-rose-500 shadow"

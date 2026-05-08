@@ -9,12 +9,16 @@ export default defineNuxtConfig({
   vite: {
     plugins: [tailwindcss()],
   },
+  
   // MapLibre is strictly client-side; SSR pages can still render the rest
   // of the chrome (header, docs text). Map demos are wrapped in <ClientOnly>.
   ssr: true,
   app: {
     head: {
       title: "mapcn-vue",
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/icon.svg' },
+      ],
       meta: [
         { charset: "utf-8" },
         { name: "viewport", content: "width=device-width, initial-scale=1" },

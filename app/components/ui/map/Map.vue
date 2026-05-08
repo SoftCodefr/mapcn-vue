@@ -125,12 +125,7 @@ const collectMapOptions = (): Partial<MapOptions> => {
   for (const [key, value] of Object.entries(attrs)) {
     if (value === undefined) continue;
     // Skip Vue event listeners (e.g. onClick) — they aren't MapLibre options.
-    if (
-      key.startsWith("on") &&
-      key.length > 2 &&
-      key[2] === key[2].toUpperCase()
-    )
-      continue;
+    if (/^on[A-Z]/.test(key)) continue;
     if (RESERVED_ATTR_KEYS.has(key)) continue;
     out[key] = value;
   }

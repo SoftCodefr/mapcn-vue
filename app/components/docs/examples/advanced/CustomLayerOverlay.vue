@@ -84,8 +84,8 @@ watch([map, isLoaded], ([m, loaded]) => {
     const features = m.queryRenderedFeatures(e.point, {
       layers: ["parks-fill"],
     });
-    if (features.length > 0)
-      hoveredPark.value = features[0].properties?.name ?? null;
+    const f = features[0];
+    if (f) hoveredPark.value = f.properties?.name ?? null;
   };
 
   m.on("mouseenter", "parks-fill", onEnter);

@@ -66,8 +66,8 @@ watch([map, isLoaded], ([m, loaded]) => {
   });
 
   const onClick = (e: MapMouseEvent & { features?: MapGeoJSONFeature[] }) => {
-    if (!e.features?.length) return;
-    const feature = e.features[0];
+    const feature = e.features?.[0];
+    if (!feature) return;
     const coords = (feature.geometry as GeoJSON.Point).coordinates as [
       number,
       number,

@@ -55,7 +55,7 @@ onBeforeUnmount(() => {
 
 <template>
   <Teleport :to="container">
-    <PopupShell variant="tooltip" :class="class">
+    <PopupShell variant="tooltip" :class="$props.class">
       <slot />
     </PopupShell>
   </Teleport>
