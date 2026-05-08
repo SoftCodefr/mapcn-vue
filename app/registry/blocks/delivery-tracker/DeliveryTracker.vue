@@ -9,11 +9,8 @@ import {
   MarkerContent,
   MarkerTooltip,
 } from "@/components/ui/map";
-import Card from "@/components/ui/Card.vue";
-import CardHeader from "@/components/ui/CardHeader.vue";
-import CardTitle from "@/components/ui/CardTitle.vue";
-import CardContent from "@/components/ui/CardContent.vue";
-import Badge from "@/components/ui/Badge.vue";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
 interface DeliveryMeal {

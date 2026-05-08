@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { Github } from "lucide-vue-next";
+import { Separator } from "@/components/ui/separator";
 
 const navItems = [
   { href: "/docs", label: "Docs" },

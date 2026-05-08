@@ -1,9 +1,7 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import { TrendingUp } from "lucide-vue-next";
-import Card from "@/components/ui/Card.vue";
-import CardHeader from "@/components/ui/CardHeader.vue";
-import CardContent from "@/components/ui/CardContent.vue";
+import { Card, CardHeader, CardContent } from "@/components/ui/card";
 import { deviceCategoryData, usersPerDay } from "./data";
 
 // Sparkline path: stroke + filled area gradient.
@@ -23,8 +21,7 @@ const sparkline = computed(() => {
   const lineD = points
     .map(([x, y], i) => (i === 0 ? `M${x},${y}` : `L${x},${y}`))
     .join(" ");
-  const fillD =
-    `${lineD} L${points[points.length - 1]![0]},${H} L${points[0]![0]},${H} Z`;
+  const fillD = `${lineD} L${points[points.length - 1]![0]},${H} L${points[0]![0]},${H} Z`;
   return { width: W, height: H, lineD, fillD };
 });
 
@@ -80,16 +77,8 @@ const donut = computed(() => {
       >
         <defs>
           <linearGradient id="usersGradient" x1="0" y1="0" x2="0" y2="1">
-            <stop
-              offset="0%"
-              stop-color="rgb(59 130 246)"
-              stop-opacity="0.4"
-            />
-            <stop
-              offset="100%"
-              stop-color="rgb(59 130 246)"
-              stop-opacity="0"
-            />
+            <stop offset="0%" stop-color="rgb(59 130 246)" stop-opacity="0.4" />
+            <stop offset="100%" stop-color="rgb(59 130 246)" stop-opacity="0" />
           </linearGradient>
         </defs>
         <path :d="sparkline.fillD" fill="url(#usersGradient)" />
@@ -115,10 +104,7 @@ const donut = computed(() => {
         </p>
 
         <!-- Donut -->
-        <svg
-          viewBox="0 0 128 128"
-          class="mx-auto mt-3 aspect-square h-32 w-32"
-        >
+        <svg viewBox="0 0 128 128" class="mx-auto mt-3 aspect-square h-32 w-32">
           <path
             v-for="slice in donut"
             :key="slice.name"

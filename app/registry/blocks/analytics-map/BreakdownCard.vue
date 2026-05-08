@@ -1,9 +1,6 @@
 <script setup lang="ts">
 import { computed } from "vue";
-import Card from "@/components/ui/Card.vue";
-import CardHeader from "@/components/ui/CardHeader.vue";
-import CardTitle from "@/components/ui/CardTitle.vue";
-import CardContent from "@/components/ui/CardContent.vue";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import type { BreakdownRow } from "./data";
 
 const props = defineProps<{ title: string; rows: BreakdownRow[] }>();

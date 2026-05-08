@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { Navigation } from "lucide-vue-next";
+import { Button } from "@/components/ui/button";
 
 const destination = {
   name: "New York",
@@ -56,13 +57,13 @@ const flyTo = () => {
         </MapMarker>
       </Map>
     </ClientOnly>
-    <button
-      type="button"
+    <Button
       aria-label="Fly to New York"
-      class="bg-secondary hover:bg-secondary/80 absolute top-2 right-2 z-10 inline-flex size-7 items-center justify-center rounded-md transition-colors"
+      variant="secondary"
+      class="hover:bg-secondary/80 absolute top-2 right-2 z-10 inline-flex size-7"
       @click="flyTo"
     >
       <Navigation class="size-4" />
-    </button>
+    </Button>
   </ExampleCard>
 </template>
