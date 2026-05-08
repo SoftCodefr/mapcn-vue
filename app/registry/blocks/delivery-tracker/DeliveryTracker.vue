@@ -14,7 +14,7 @@ import CardHeader from "@/components/ui/CardHeader.vue";
 import CardTitle from "@/components/ui/CardTitle.vue";
 import CardContent from "@/components/ui/CardContent.vue";
 import Badge from "@/components/ui/Badge.vue";
-import Button from "@/components/ui/Button.vue";
+import { Button } from "@/components/ui/button";
 
 interface DeliveryMeal {
   name: string;

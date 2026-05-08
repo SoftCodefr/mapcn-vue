@@ -31,7 +31,7 @@ const indent = computed(() => `${props.depth * 0.75}rem`);
     :style="{ paddingLeft: indent }"
     @click="item.path && $emit('select', item.path)"
   >
-    <ChevronRight class="size-3.5 invisible shrink-0" />
+    <ChevronRight class="invisible size-3.5 shrink-0" />
     <FileIcon class="size-3.5 shrink-0" />
     <span class="truncate">{{ item.name }}</span>
   </button>
@@ -46,10 +46,7 @@ const indent = computed(() => `${props.depth * 0.75}rem`);
     >
       <ChevronRight
         :class="
-          cn(
-            'size-3.5 shrink-0 transition-transform',
-            open && 'rotate-90',
-          )
+          cn('size-3.5 shrink-0 transition-transform', open && 'rotate-90')
         "
       />
       <Folder class="size-3.5 shrink-0" />
