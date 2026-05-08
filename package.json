@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "nuxt dev",
+    "prebuild": "npm run registry:build",
     "build": "nuxt build",
+    "pregenerate": "npm run registry:build",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
