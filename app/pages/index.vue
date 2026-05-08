@@ -42,7 +42,7 @@ useHead({
           class="text-muted-foreground animate-fade-up animate-stagger max-w-2xl text-center leading-relaxed sm:text-lg sm:leading-relaxed md:text-xl md:leading-relaxed"
           style="--stagger: 2"
         >
-          Ready to use, customizable map components for React.<br
+          Ready to use, customizable map components for Vue.<br
             class="hidden sm:block"
           />Built on MapLibre. Styled with Tailwind.
         </p>
