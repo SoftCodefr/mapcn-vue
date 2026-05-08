@@ -5,7 +5,7 @@ const navItems = [
   { href: "/docs", label: "Docs" },
   { href: "/docs/basic-map", label: "Components" },
   { href: "/blocks", label: "Blocks" },
-  { href: "/playground", label: "Playground" },
+  // { href: "/playground", label: "Playground" },
 ];
 </script>
 
