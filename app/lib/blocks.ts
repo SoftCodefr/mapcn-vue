@@ -1,4 +1,4 @@
-import registry from "../../registry.json";
+import registries from "../../registries.json";
 
 export interface RegistryBlockItem {
   name: string;
@@ -21,7 +21,7 @@ export interface FileTree {
   children?: FileTree[];
 }
 
-const typedRegistry = registry as RegistrySchema;
+const typedRegistry = registries as RegistrySchema;
 
 /** All registry items typed as `registry:block`. */
 export function getAllBlocks(): RegistryBlockItem[] {
