@@ -1,0 +1,13 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry.json",
+  "name": "mapcn-vue",
+  "homepage": "https://mapcn-vue.com",
+  "items": [
+    {
+      "name": "map",
+      "type": "registry:ui",
+      "title": "Map",
+      "description": "A MapLibre-powered Vue map component with markers, popups, tooltips, routes, arcs, clusters, and controls."
+    }
+  ]
+}

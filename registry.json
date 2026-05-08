@@ -1,0 +1,47 @@
+{
+  "$schema": "https://shadcn-vue.com/schema/registry.json",
+  "name": "mapcn-vue",
+  "homepage": "https://mapcn-vue.com",
+  "items": [
+    {
+      "name": "map",
+      "type": "registry:ui",
+      "title": "Map",
+      "description": "A MapLibre-powered Vue map component with markers, popups, tooltips, routes, arcs, clusters, and controls.",
+      "dependencies": ["maplibre-gl", "lucide-vue-next", "clsx", "tailwind-merge"],
+      "registryDependencies": [],
+      "files": [
+        { "path": "app/components/ui/map/Map.vue", "type": "registry:ui", "target": "components/ui/map/Map.vue" },
+        { "path": "app/components/ui/map/MapMarker.vue", "type": "registry:ui", "target": "components/ui/map/MapMarker.vue" },
+        { "path": "app/components/ui/map/MarkerContent.vue", "type": "registry:ui", "target": "components/ui/map/MarkerContent.vue" },
+        { "path": "app/components/ui/map/MarkerLabel.vue", "type": "registry:ui", "target": "components/ui/map/MarkerLabel.vue" },
+        { "path": "app/components/ui/map/MarkerPopup.vue", "type": "registry:ui", "target": "components/ui/map/MarkerPopup.vue" },
+        { "path": "app/components/ui/map/MarkerTooltip.vue", "type": "registry:ui", "target": "components/ui/map/MarkerTooltip.vue" },
+        { "path": "app/components/ui/map/MapPopup.vue", "type": "registry:ui", "target": "components/ui/map/MapPopup.vue" },
+        { "path": "app/components/ui/map/MapControls.vue", "type": "registry:ui", "target": "components/ui/map/MapControls.vue" },
+        { "path": "app/components/ui/map/MapRoute.vue", "type": "registry:ui", "target": "components/ui/map/MapRoute.vue" },
+        { "path": "app/components/ui/map/MapArc.vue", "type": "registry:ui", "target": "components/ui/map/MapArc.vue" },
+        { "path": "app/components/ui/map/MapClusterLayer.vue", "type": "registry:ui", "target": "components/ui/map/MapClusterLayer.vue" },
+        { "path": "app/components/ui/map/PopupShell.vue", "type": "registry:ui", "target": "components/ui/map/PopupShell.vue" },
+        { "path": "app/components/ui/map/index.ts", "type": "registry:ui", "target": "components/ui/map/index.ts" },
+        { "path": "app/components/ui/map/context.ts", "type": "registry:ui", "target": "components/ui/map/context.ts" },
+        { "path": "app/components/ui/map/types.ts", "type": "registry:ui", "target": "components/ui/map/types.ts" },
+        { "path": "app/components/ui/map/utils.ts", "type": "registry:ui", "target": "components/ui/map/utils.ts" },
+        { "path": "app/components/ui/map/composables/use-map.ts", "type": "registry:ui", "target": "components/ui/map/composables/use-map.ts" },
+        { "path": "app/components/ui/map/composables/use-map-layer.ts", "type": "registry:ui", "target": "components/ui/map/composables/use-map-layer.ts" },
+        { "path": "app/components/ui/map/composables/use-popup.ts", "type": "registry:ui", "target": "components/ui/map/composables/use-popup.ts" },
+        { "path": "app/components/ui/map/composables/use-resolved-theme.ts", "type": "registry:ui", "target": "components/ui/map/composables/use-resolved-theme.ts" }
+      ],
+      "css": {
+        "@layer base": {
+          ".maplibregl-popup-content": {
+            "@apply bg-transparent! shadow-none! p-0! rounded-none!": {}
+          },
+          ".maplibregl-popup-tip": {
+            "@apply hidden!": {}
+          }
+        }
+      }
+    }
+  ]
+}

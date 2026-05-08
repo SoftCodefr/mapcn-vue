@@ -1,0 +1,116 @@
+<script setup lang="ts">
+import { Clock, ExternalLink, Navigation, Star } from "lucide-vue-next";
+
+const places = [
+  {
+    id: 1,
+    name: "The Metropolitan Museum of Art",
+    label: "Museum",
+    category: "Museum",
+    rating: 4.8,
+    reviews: 12453,
+    hours: "10:00 AM - 5:00 PM",
+    image: "https://images.unsplash.com/photo-1575223970966-76ae61ee7838?w=300&h=200&fit=crop",
+    lng: -73.9632,
+    lat: 40.7794,
+  },
+  {
+    id: 2,
+    name: "Brooklyn Bridge",
+    label: "Landmark",
+    category: "Landmark",
+    rating: 4.9,
+    reviews: 8234,
+    hours: "Open 24 hours",
+    image: "https://images.unsplash.com/photo-1496588152823-86ff7695e68f?w=300&h=200&fit=crop",
+    lng: -73.9969,
+    lat: 40.7061,
+  },
+  {
+    id: 3,
+    name: "Grand Central Terminal",
+    label: "Transit",
+    category: "Transit",
+    rating: 4.7,
+    reviews: 5621,
+    hours: "5:15 AM - 2:00 AM",
+    image: "https://images.unsplash.com/photo-1534430480872-3498386e7856?w=300&h=200&fit=crop",
+    lng: -73.9772,
+    lat: 40.7527,
+  },
+];
+</script>
+
+<template>
+  <div class="h-[500px] w-full">
+    <ClientOnly>
+      <Map :center="[-73.98, 40.74]" :zoom="11">
+        <MapMarker
+          v-for="place in places"
+          :key="place.id"
+          :longitude="place.lng"
+          :latitude="place.lat"
+        >
+          <MarkerContent>
+            <div
+              class="size-5 cursor-pointer rounded-full border-2 border-white bg-rose-500 shadow-lg transition-transform hover:scale-110"
+            />
+            <MarkerLabel position="bottom">{{ place.label }}</MarkerLabel>
+          </MarkerContent>
+          <MarkerPopup class="w-62 p-0">
+            <div class="relative h-32 overflow-hidden rounded-t-md">
+              <img
+                :src="place.image"
+                :alt="place.name"
+                class="size-full object-cover"
+              >
+            </div>
+            <div class="space-y-2 p-3">
+              <div>
+                <p
+                  class="text-muted-foreground pb-0.5 text-[11px] font-medium tracking-wide uppercase"
+                >
+                  {{ place.category }}
+                </p>
+                <h3 class="text-foreground leading-tight font-semibold">
+                  {{ place.name }}
+                </h3>
+              </div>
+              <div class="flex items-center gap-3 text-sm">
+                <div class="flex items-center gap-1">
+                  <Star class="size-3.5 fill-amber-400 text-amber-400" />
+                  <span class="font-medium">{{ place.rating }}</span>
+                  <span class="text-muted-foreground">
+                    ({{ place.reviews.toLocaleString() }})
+                  </span>
+                </div>
+              </div>
+              <div
+                class="text-muted-foreground flex items-center gap-1.5 text-sm"
+              >
+                <Clock class="size-3.5" />
+                <span>{{ place.hours }}</span>
+              </div>
+              <div class="flex gap-2 pt-1">
+                <button
+                  type="button"
+                  class="bg-primary text-primary-foreground hover:bg-primary/90 inline-flex h-8 flex-1 items-center justify-center gap-1.5 rounded-md text-xs font-medium transition-colors"
+                >
+                  <Navigation class="size-3.5" />
+                  Directions
+                </button>
+                <button
+                  type="button"
+                  aria-label="Open in new tab"
+                  class="hover:bg-accent inline-flex size-8 items-center justify-center rounded-md border border-border bg-background transition-colors"
+                >
+                  <ExternalLink class="size-3.5" />
+                </button>
+              </div>
+            </div>
+          </MarkerPopup>
+        </MapMarker>
+      </Map>
+    </ClientOnly>
+  </div>
+</template>
