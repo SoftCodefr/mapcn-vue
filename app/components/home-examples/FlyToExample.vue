@@ -13,7 +13,8 @@ const mapRef = useTemplateRef<{
 }>("map");
 
 const flyTo = () => {
-  mapRef.value?.map?.value?.flyTo({
+  console.log("mapRef", mapRef.value?.map);
+  mapRef.value?.map?.flyTo({
     center: destination.center,
     zoom: 14,
     duration: 2500,
