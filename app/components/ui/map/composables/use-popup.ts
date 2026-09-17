@@ -5,7 +5,8 @@ import {
   type MaybeRefOrGetter,
   toValue,
 } from "vue";
-import MapLibreGL, { type PopupOptions } from "maplibre-gl";
+import * as MapLibreGL from "maplibre-gl";
+import type { PopupOptions } from "maplibre-gl";
 
 /**
  * Encapsulates MapLibre Popup creation, the Teleport target div, and the
