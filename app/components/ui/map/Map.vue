@@ -10,10 +10,11 @@ import {
   useTemplateRef,
   watch,
 } from "vue";
-import MapLibreGL, {
-  type MapOptions,
-  type ProjectionSpecification,
-  type StyleSpecification,
+import * as MapLibreGL from "maplibre-gl";
+import type {
+  MapOptions,
+  ProjectionSpecification,
+  StyleSpecification,
 } from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 
